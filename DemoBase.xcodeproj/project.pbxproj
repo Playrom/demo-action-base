@@ -11,6 +11,7 @@
 		6C6369442C07433900266A45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6369432C07433900266A45 /* ContentView.swift */; };
 		6C6369462C07433C00266A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6369452C07433C00266A45 /* Assets.xcassets */; };
 		6C6369492C07433C00266A45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6369482C07433C00266A45 /* Preview Assets.xcassets */; };
+		6C6369512C07568800266A45 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6C6369502C07568800266A45 /* MyLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6369512C07568800266A45 /* MyLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = DemoBase;
+			packageProductDependencies = (
+				6C6369502C07568800266A45 /* MyLibrary */,
+			);
 			productName = DemoBase;
 			productReference = 6C63693E2C07433900266A45 /* DemoBase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 6C6369352C07433900266A45;
+			packageReferences = (
+				6C63694F2C07568800266A45 /* XCRemoteSwiftPackageReference "demo-action-child" */,
+			);
 			productRefGroup = 6C63693F2C07433900266A45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C63694F2C07568800266A45 /* XCRemoteSwiftPackageReference "demo-action-child" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Playrom/demo-action-child.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C6369502C07568800266A45 /* MyLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C63694F2C07568800266A45 /* XCRemoteSwiftPackageReference "demo-action-child" */;
+			productName = MyLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C6369362C07433900266A45 /* Project object */;
 }
